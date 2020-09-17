@@ -2,8 +2,8 @@
 Andres Felipe Cubillos Hurtado
 Brayan Santiago Buitrago
 
-## Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
-# La clase SampleServlet incluida a continuacion.
+# Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
+## La clase SampleServlet incluida a continuacion.
 
 ```
 	@WebServlet(
