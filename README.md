@@ -2,7 +2,7 @@
 Andres Felipe Cubillos Hurtado
 Brayan Santiago Buitrago
 
-# Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
+## Parte II. - Haciendo una aplicación Web dinámica a bajo nivel.
 # La clase SampleServlet incluida a continuacion.
 
 ```
@@ -29,10 +29,10 @@ Brayan Santiago Buitrago
    
    Le solicita algo a la pagina y si todo sale bien, no se le agrega anda mas y  logra conectar, escribe hello name!
    
-   # Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
+   ## Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
    
 ```
-	mvn package 
+    mvn package 
     mvn tomcat7:run
 ```
     
