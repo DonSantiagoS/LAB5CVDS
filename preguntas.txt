@@ -1,0 +1,28 @@
+-----------------------------------------------------------------------------------------
+------------------------------------Preguntas--------------------------------------------
+-----------------------------------------------------------------------------------------
+
+- Santiago Buitrago
+- Andres Cubillos
+
+
+				¿Cuál es la diferencia entre los verbos GET y POST? 
+Get y Post tienen similitudes sin embargo la diferencia mas grande se basa en que get se
+usa generalmente para realizar peticiones, y post se utiliza para realizar peticiones 
+pero a su ves enviando parametros, aunque GET puede hacerlo tiene grandes limitaciones 
+es por esto que se utiliza el POST El contenido va en el body del request, no aparece 
+nada en la URL, aunque se envía en el mismo formato que con el método GET. Si se quiere 
+enviar texto largo o cualquier tipo de archivo este es el método apropiado.
+
+					¿Qué otros tipos de peticiones existen?
+
+Get 	--> Leer la representacion de un recurso, devuelve la representacion en un formato concreto HTML, XML, JSON o imágenes, JavaScript, CSS, etc.
+Head	--> Es similar al get sin embargo la diferencia es que la respuesta no tiene el cuerpo
+Options --> Es util para poder observar que metodos HTTP soporta el servidor al cual estamos consultando con respecto a los recursos que se tienen en este
+Post 	--> Crear o ejecutar mediante peticiones en donde se envian datos o parametros
+Update 	--> Actualizar recursos
+Put 	--> Actualizaciones parciales de los recursos, tambien puede crear recursos, no mestra ninguna informacion en la URL, a diferencia de POST es idempotente, mantiene el mismo estado que en la primera llamada, a menos de que sea modificado
+Delete 	--> Eleminar recursos
+
+20. La diferencia es que con Post no aparece el id=1 y con el get si aparece 
+21. ¿Qué se está viendo? Revise cómo están implementados los métodos de la clase Service.java para entender el funcionamiento interno.
