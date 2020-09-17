@@ -78,3 +78,19 @@ Brayan Santiago Buitrago
    ## Una vez hecho esto, verifique el funcionamiento de la aplicación, recompile y ejecute la aplicación.
  
  ![](images/parte2funcionando.PNG)
+ 
+ 
+ 
+ ![](images/parte2ejecutando.PNG)
+ 
+  ## Intente hacer diferentes consultas desde un navegador Web para probar las diferentes funcionalidades.
+  
+ ![](images/normal.PNG)
+ 
+ ![](images/numerogrande.PNG)
+ 
+ ![](images/invalido.PNG)
+ 
+ 
+ # Parte III
+ # En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
