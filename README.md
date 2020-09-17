@@ -38,3 +38,15 @@ Brayan Santiago Buitrago
     
     ![](images/mvntomcat.png)
     
+   ## Abrimos un navegador, y en la barra de direcciones pusimos la URL con la cual se le enviarán peticiones al ‘SampleServlet’.
+   ```
+    http://localhost:8080/
+   ```
+   
+    ![](images/localhost.png)
+   
+    
+   ## Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET 
+   Agregamos nuestros nombres
+    ![](images/andressantiago.png)
+   
