@@ -61,46 +61,20 @@ Brayan Santiago Buitrago
    
    ## En el navegador revise la dirección https://jsonplaceholder.typicode.com/todos/1. Intente cambiando diferentes números al final del path de la url.
    Al cambiar los numeros cambia el id y el titulo escrito en latin, y el completed va cambiandro de estado.
-     ![](images/jsonplace.PNG)
+   
+![](images/jsonplace.PNG)
+     
    ## Basado en la respuesta que le da el servicio del punto anterior, cree la clase edu.eci.cvds.servlet.model.Todo con un constructor vacío y los métodos getter y setter para las propiedades de los "To Dos" que se encuentran en la url indicada.
-   ```
-    package edu.eci.cvds.servlet.model.Todo;
-
-public class Todo{
-	private int userId;
-	private int id;
-	private String title;
-	private boolean completed;
-	
-	public Todo(){
-		
-	}
-	public void setUserId(int userId){
-		this.userId=userId;
-	}
-	public void setId(int id){
-		this.id=id;
-	}
-	public void setTitle(String title){
-		this.title= title;
-	}
-	public void setCompleted(boolean completed){
-		this.completed=completed;
-	}
-	public int getUserId{
-		return userId;
-	}
-	public int getId{
-		return id;
-	}
-	public String getTitle{
-		return title;
-	}
-	public boolean getBoolean{
-		return completed;
-	}
-}
-
-   ```
+   
+![](images/todo.PNG)
+  
+  
+   ## Cree una clase que herede de la clase HttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de las superclases.
    
    
+![](images/simplesimilar.PNG)
+
+
+   ## Una vez hecho esto, verifique el funcionamiento de la aplicación, recompile y ejecute la aplicación.
+ 
+ ![](images/parte2funcionando.PNG)
