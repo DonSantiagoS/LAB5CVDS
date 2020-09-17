@@ -17,55 +17,55 @@ tomado de (Telnet)[1]
 
 Segun la pagina 36 del (RFC del protocol HTTP)[2] la peticion con el comando get se realiza con el siguiente comando:
 
-![https://github.com/DonSantiagoS/LAB5CVDS/blob/master/images/imagen1.PNG]
+![](https://github.com/DonSantiagoS/LAB5CVDS/blob/master/images/imagen1.PNG)
 
 ```
 GET /sssss/abc.html HTTP/1.0
 ```
 
-![https://github.com/DonSantiagoS/LAB5CVDS/blob/master/images/imagen2.PNG]
+![](https://github.com/DonSantiagoS/LAB5CVDS/blob/master/images/imagen2.PNG)
 
 Para realizar la peticion del recurso **‘sssss/abc.html’** usando la version 1.0 de http
 es de gran importancia presioan **ENTER** dos veces para ingresar al comando
 
 #### ¿Qué codigo de error sale?
 	
-	El codigo que salio fue el 301 lo que significa que **Se movio el recurso de manera permanente**
+El codigo que salio fue el 301 lo que significa que **Se movio el recurso de manera permanente**
 
 #### ¿Qué otros códigos de error existen?, ¿En qué caso se manejarán?
 
-	Codigos de error existen los siguientes:
+Codigos de error existen los siguientes:
 	
-	* **400 Peticion incorrecta:** El servidor no logro encontrar o procesar la solicitud por un error aparente del cliente como sintaxis, tamaño o enrutamiento
-	* **401 No autorizado:** es similar al error 403, se trata del error lanzado cuando la autentificacion no se proporciono o es incorrecta
-	* **402 Pago rquerido:** Este codigo esta reservado para uso futuro, en el cual se puedan notificar errores en pagos digitales, pero actualmente algunas empresas lo han utilizado para expresas otras cosas como Google debelopers que lo usa en caso de que el usuario haya superado el limite diario de solicitudes
-	+ **403 Prohibido:** La solicitud realzada es correcta debido a que si tiene los datos validos y el servidor la entiende, pero el servidor la esta rechazando, esto puede darse por gestion de permisos, necesita una cuenta especifica o son acciones prohibidas
-	+ **404 No encontrado:** No fue posible encontrar el recurso solicitado
-	+ **405 Metodo no permitido:** No se admite un método de solicitud para el recurso solicitado; por ejemplo, una solicitud GET en un formulario que requiere que los datos se presenten a través de POST , o una solicitud PUT en un recurso de solo lectura.
-	+ **406 No aceptable:**El recurso solicitado es capaz de generar solo contenido no aceptable de acuerdo con los encabezados de aceptación enviados en la solicitud.
-	+ **407 Se requiere autenticación de proxy:**El cliente primero debe autenticarse con el proxy 
-	+ **48 Solicitar tiempo de espera:**El servidor agotó el tiempo de espera de la solicitud. De acuerdo con las especificaciones HTTP: "El cliente no produjo una solicitud dentro del tiempo en que el servidor estaba preparado para esperar. El cliente PUEDE repetir la solicitud sin modificaciones en cualquier momento posterior". 
-	+ **409 Conflicto:**Indica que la solicitud no se pudo procesar debido a un conflicto en el estado actual del recurso, como un conflicto de edición entre varias actualizaciones simultáneas.
-	+ **410 desaparecido:** Indica que el recurso solicitado ya no está disponible y no volverá a estar disponible. Esto debe usarse cuando un recurso se ha eliminado intencionalmente y el recurso debe purgarse. 
-	+ **411 Longitud requerida:**La solicitud no especificó la longitud de su contenido, que es requerida por el recurso solicitado.
-	+ **412 Precondición fallida:** El servidor no cumple una de las condiciones previas que el solicitante puso en los campos del encabezado de la solicitud.
-	+ **413 Carga útil demasiado grande:** La solicitud es mayor de lo que el servidor desea o puede procesar. Anteriormente llamado "entidad de solicitud demasiado grande".
-	+ **414 URI demasiado largo:** El URI proporcionado era demasiado largo para que el servidor lo procesara. A menudo, el resultado de la codificación de demasiados datos como una cadena de consulta de una solicitud GET, en cuyo caso debe convertirse en una solicitud POST. Anteriormente denominado "Request-URI Too Long".
-	+ **415 Tipo de medio no admitido:** La entidad de solicitud tiene un tipo de medio que el servidor o recurso no admite. Por ejemplo, el cliente carga una imagen como image / svg + xml , pero el servidor requiere que las imágenes usen un formato diferente.
-	+ **416 Rango no satisfactorio:** El cliente ha solicitado una parte del archivo ( servicio de bytes ), pero el servidor no puede proporcionar esa parte. Por ejemplo, si el cliente solicita una parte del archivo que se encuentra más allá del final del archivo. Anteriormente denominado "Rango solicitado no satisfactorio". 
-	+ **417 Expectativa fallida:**El servidor no puede cumplir con los requisitos del campo Expect request-header.
-	+ **418 Soy una tetera:**Este código se definió en 1998 como una de las bromas tradicionales de IETF April Fools , en RFC 2324 , Protocolo de control de cafetera Hyper Text , y no se espera que sea implementado por servidores HTTP reales
-	+ **421 Solicitud mal dirigida:** La solicitud se dirigió a un servidor que no puede producir una respuesta
-	+ **422 Entidad no procesable :** La solicitud estaba bien formada, pero no se pudo seguir debido a errores semánticos
-	+ **423 Bloqueado:** El recurso al que se accede está bloqueado.
-	+ **424 Dependencia fallida:** La solicitud falló porque dependía de otra solicitud y esa solicitud falló
-	+ **425 demasiado pronto:**Indica que el servidor no está dispuesto a correr el riesgo de procesar una solicitud que podría reproducirse.
-	+ **426 Requiere actualización:**El cliente debe cambiar a un protocolo diferente, como TLS / 1.0 , que se proporciona en el campo de encabezado de actualización 
-	+ **428 Requisito previo:**El servidor de origen requiere que la solicitud sea condicional. Con la intención de evitar el problema de la 'actualización perdida', donde un cliente obtiene el estado de un recurso, lo modifica y lo devuelve al servidor, cuando mientras tanto un tercero ha modificado el estado en el servidor, lo que lleva a un conflicto.
-	+ **429 Demasiadas solicitudes:**El usuario ha enviado demasiadas solicitudes en un período de tiempo determinado. Diseñado para su uso con esquemas de limitación de velocidad .
-	+ **431 Campos de encabezado de solicitud demasiado grandes:**El servidor no está dispuesto a procesar la solicitud porque un campo de encabezado individual o todos los campos de encabezado en conjunto son demasiado grandes.
-	+ **451 No disponible por motivos legales:**Un operador de servidor ha recibido una demanda legal para denegar el acceso a un recurso oa un conjunto de recursos que incluye el recurso solicitado. 
-	
++ **400 Peticion incorrecta:** El servidor no logro encontrar o procesar la solicitud por un error aparente del cliente como sintaxis, tamaño o enrutamiento
++ **401 No autorizado:** es similar al error 403, se trata del error lanzado cuando la autentificacion no se proporciono o es incorrecta
++ **402 Pago rquerido:** Este codigo esta reservado para uso futuro, en el cual se puedan notificar errores en pagos digitales, pero actualmente algunas empresas lo han utilizado para expresas otras cosas como Google debelopers que lo usa en caso de que el usuario haya superado el limite diario de solicitudes
++ **403 Prohibido:** La solicitud realzada es correcta debido a que si tiene los datos validos y el servidor la entiende, pero el servidor la esta rechazando, esto puede darse por gestion de permisos, necesita una cuenta especifica o son acciones prohibidas
++ **404 No encontrado:** No fue posible encontrar el recurso solicitado
++ **405 Metodo no permitido:** No se admite un método de solicitud para el recurso solicitado; por ejemplo, una solicitud GET en un formulario que requiere que los datos se presenten a través de POST , o una solicitud PUT en un recurso de solo lectura.
++ **406 No aceptable:**El recurso solicitado es capaz de generar solo contenido no aceptable de acuerdo con los encabezados de aceptación enviados en la solicitud.
++ **407 Se requiere autenticación de proxy:**El cliente primero debe autenticarse con el proxy 
++ **48 Solicitar tiempo de espera:**El servidor agotó el tiempo de espera de la solicitud. De acuerdo con las especificaciones HTTP: "El cliente no produjo una solicitud dentro del tiempo en que el servidor estaba preparado para esperar. El cliente PUEDE repetir la solicitud sin modificaciones en cualquier momento posterior". 
++ **409 Conflicto:**Indica que la solicitud no se pudo procesar debido a un conflicto en el estado actual del recurso, como un conflicto de edición entre varias actualizaciones simultáneas.
++ **410 desaparecido:** Indica que el recurso solicitado ya no está disponible y no volverá a estar disponible. Esto debe usarse cuando un recurso se ha eliminado intencionalmente y el recurso debe purgarse. 
++ **411 Longitud requerida:**La solicitud no especificó la longitud de su contenido, que es requerida por el recurso solicitado.
++ **412 Precondición fallida:** El servidor no cumple una de las condiciones previas que el solicitante puso en los campos del encabezado de la solicitud.
++ **413 Carga útil demasiado grande:** La solicitud es mayor de lo que el servidor desea o puede procesar. Anteriormente llamado "entidad de solicitud demasiado grande".
++ **414 URI demasiado largo:** El URI proporcionado era demasiado largo para que el servidor lo procesara. A menudo, el resultado de la codificación de demasiados datos como una cadena de consulta de una solicitud GET, en cuyo caso debe convertirse en una solicitud POST. Anteriormente denominado "Request-URI Too Long".
++ **415 Tipo de medio no admitido:** La entidad de solicitud tiene un tipo de medio que el servidor o recurso no admite. Por ejemplo, el cliente carga una imagen como image / svg + xml , pero el servidor requiere que las imágenes usen un formato diferente.
++ **416 Rango no satisfactorio:** El cliente ha solicitado una parte del archivo ( servicio de bytes ), pero el servidor no puede proporcionar esa parte. Por ejemplo, si el cliente solicita una parte del archivo que se encuentra más allá del final del archivo. Anteriormente denominado "Rango solicitado no satisfactorio". 
++ **417 Expectativa fallida:**El servidor no puede cumplir con los requisitos del campo Expect request-header.
++ **418 Soy una tetera:**Este código se definió en 1998 como una de las bromas tradicionales de IETF April Fools , en RFC 2324 , Protocolo de control de cafetera Hyper Text , y no se espera que sea implementado por servidores HTTP reales
++ **421 Solicitud mal dirigida:** La solicitud se dirigió a un servidor que no puede producir una respuesta
++ **422 Entidad no procesable :** La solicitud estaba bien formada, pero no se pudo seguir debido a errores semánticos
++ **423 Bloqueado:** El recurso al que se accede está bloqueado.
++ **424 Dependencia fallida:** La solicitud falló porque dependía de otra solicitud y esa solicitud falló
++ **425 demasiado pronto:**Indica que el servidor no está dispuesto a correr el riesgo de procesar una solicitud que podría reproducirse.
++ **426 Requiere actualización:**El cliente debe cambiar a un protocolo diferente, como TLS / 1.0 , que se proporciona en el campo de encabezado de actualización 
++ **428 Requisito previo:**El servidor de origen requiere que la solicitud sea condicional. Con la intención de evitar el problema de la 'actualización perdida', donde un cliente obtiene el estado de un recurso, lo modifica y lo devuelve al servidor, cuando mientras tanto un tercero ha modificado el estado en el servidor, lo que lleva a un conflicto.
++ **429 Demasiadas solicitudes:**El usuario ha enviado demasiadas solicitudes en un período de tiempo determinado. Diseñado para su uso con esquemas de limitación de velocidad .
++ **431 Campos de encabezado de solicitud demasiado grandes:**El servidor no está dispuesto a procesar la solicitud porque un campo de encabezado individual o todos los campos de encabezado en conjunto son demasiado grandes.
++ **451 No disponible por motivos legales:**Un operador de servidor ha recibido una demanda legal para denegar el acceso a un recurso oa un conjunto de recursos que incluye el recurso solicitado. 
+
 
 Ahora realizamos otra conexion pero esta vez a:
 
