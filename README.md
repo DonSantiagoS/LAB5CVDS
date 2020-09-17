@@ -93,4 +93,29 @@ Brayan Santiago Buitrago
  
  
  # Parte III
- # En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
+ ## En su servlet, sobreescriba el método doPost, y haga la misma implementación del doGet.
+ Se hizo la misma implementacion que para doGet
+ ## Cree el archivo index.html en el directorio src/main/webapp/index.html de la siguiente manera:
+ 
+  ```
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
+</html>
+
+   ```
+ 
+ ## En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón
+ 
+ ![](images/form.PNG)
+ ![](images/cincuenta.PNG)
+ ![](images/nonumero.PNG)
+ 
+ ## Cambie el formulario para que ahora en lugar de POST, use el método GET . Qué diferencia observa?
+ Ninguna
