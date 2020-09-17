@@ -30,20 +30,19 @@ Brayan Santiago Buitrago
    Le solicita algo a la pagina y si todo sale bien, no se le agrega anda mas y  logra conectar, escribe hello name!
    
    ## Compile y ejecute la aplicación en el servidor embebido Tomcat, a través de Maven con:
-   
-```
+ ```
     mvn package 
     mvn tomcat7:run
-```
+ ```
     
-    ![](images/mvntomcat.png)
+ ![](images/mvntomcat.png)
     
    ## Abrimos un navegador, y en la barra de direcciones pusimos la URL con la cual se le enviarán peticiones al ‘SampleServlet’.
    ```
     http://localhost:8080/
    ```
    
-    ![](images/localhost.png)
+  ![](images/localhost.png)
    
     
    ## Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET 
