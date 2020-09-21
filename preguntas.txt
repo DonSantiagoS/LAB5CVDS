@@ -7,6 +7,7 @@
 
 
 				¿Cuál es la diferencia entre los verbos GET y POST? 
+				
 Get y Post tienen similitudes sin embargo la diferencia mas grande se basa en que get se
 usa generalmente para realizar peticiones, y post se utiliza para realizar peticiones 
 pero a su ves enviando parametros, aunque GET puede hacerlo tiene grandes limitaciones 
@@ -26,3 +27,6 @@ Delete 	--> Eleminar recursos
 
 20. La diferencia es que con Post no aparece el id=1 y con el get si aparece 
 21. ¿Qué se está viendo? Revise cómo están implementados los métodos de la clase Service.java para entender el funcionamiento interno.
+
+
+Estas preguntas, tambien se encuentran el el repositorio en el README

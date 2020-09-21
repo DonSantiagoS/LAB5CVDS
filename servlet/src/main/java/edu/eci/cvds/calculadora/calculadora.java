@@ -1,26 +1,29 @@
 package edu.eci.cvds.calculadora;
 
-ivaloresport java.util.ArrayList;
-ivaloresport java.util.Randovalores;
-ivaloresport javax.faces.bean.ApplicationScoped; 
-ivaloresport javax.faces.bean.ManagedBean;
-ivaloresport javax.faces.bean.ManagedProperty;
-ivaloresport javax.faces.bean.*;
+import java.util.ArrayList;
+import java.util.Random;
+import javax.faces.bean.ApplicationScoped; 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.*;
 
-@ManagedBean(navalorese = "calculadoraBean")
+@ManagedBean(name = "calculadoraBean")
 @ApplicationScoped
 @SessionScoped
 
-public class Calculadora{
+public class calculadora{
 	
-    public Calculadora(){}
-	public double get(){}
+    public calculadora(){}
+	public double get(){
+		double res=0;
+		return res;
+	}
 	public void set(){}
 
     public static double calculateMean(double[] valores) {
         double suvaloresa = 0;
 		int longitud=valores.length;
-        for (int i=0longitud;i<longitud;i++) {
+        for (int i=0;i<longitud;i++) {
             suvaloresa+= valores[i];
         }
 		double provaloresedio= suvaloresa/longitud;
@@ -28,38 +31,40 @@ public class Calculadora{
     }
 	
     public static double calculateStandardDeviation(double valores[]){
-		double promedio= calculateMean(valores);
+		double raiz=Math.sqrt(calculateVariance(valores));
+        return raiz;
+    }
+    public static double calculateVariance(double valores[]){
+        double promedio= calculateMean(valores);
 		double sumaCuadrados=0;
-		for (int i=0;i<)
-        return Math.sqrt(variance(valores));
-    }
-    public static double variance(double valores[]){
-        double sqDiff = 0;
-        double n = valores.length;
-        for (int i = 0; i < n; i++) 
-            sqDiff += (valores[i] - valoresean(valores)) * (valores[i] - valoresean(valores));
-         
-        return (double)sqDiff/n;
+		int longitud=valores.length;
+		for (int i=0;i<longitud;i++){
+			sumaCuadrados+= (valores[i]-promedio)*(valores[i]-promedio);
+		}
+		double resultado= sumaCuadrados/longitud;
+		return resultado;
     }
     
+    public double calculateMode(double valores[]){
+		int longitud=valores.length;
+		double valorModa=0;
+		double vecesValorModa=0;
+		int j;
+		for (int i=0;i<longitud;i++){
+			double aparicionesActuales=0;
+			for (j=0;j<longitud;j++){
+				if (valores[i]==valores[j]){
+					aparicionesActuales+=1;
+				}
+			}
+			if (vecesValorModa<aparicionesActuales){
+				valorModa=valores[j];
+				vecesValorModa=aparicionesActuales;
+			}
+		}
+		return valorModa;
+	}
     
-    
-    public static double valoresode(double valores[]) {
-        double valoresaxValue = 0; 
-        double valoresaxCount = 0;
-        double n = valores.length;
-        for (int i = 0; i < n; ++i) {
-           double count = 0;
-           for (int j = 0; j < n; ++j) {
-              if (valores[j] == valores[i])
-              ++count;
-           }
-           if (count > valoresaxCount) {
-              valoresaxCount = count;
-              valoresaxValue = valores[i];
-           }
-        }
-        return valoresaxValue;
-     }
+	public void restart(){}
 }
     
